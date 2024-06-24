@@ -13,3 +13,12 @@ npm-debug.log
 yarn-error.log
 /.idea
 /.vscode
+docker/mysql/data/#innodb_temp/
+docker/mysql/data/*.index
+docker/mysql/data/*.log
+docker/mysql/data/*.pid
+docker/mysql/data/*.sock
+docker/mysql/data/*.ibd
+docker/mysql/data/*.ibdata*
+docker/mysql/data/binlog.*
+

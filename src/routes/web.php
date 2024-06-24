@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\AttendanceController;
 use App\Http\Controllers\WorkController;
 use Illuminate\Support\Facades\Route;
 
@@ -16,5 +17,9 @@ use Illuminate\Support\Facades\Route;
 
 Route::middleware('auth')->group(function () {
 	Route::get('/', [WorkController::class, 'index']);
-	Route::get('/attendance', [WorkController::class, 'attendance']);
+	Route::post('/work/start', [WorkController::class, 'startWork'])->name('work.start');
+	Route::post('/work/end', [WorkController::class, 'endWork'])->name('work.end');
+	Route::post('/break/start', [WorkController::class, 'startBreak'])->name('break.start');
+	Route::post('/break/end', [WorkController::class, 'endBreak'])->name('break.end');
+	Route::get('/attendance/{date?}', [AttendanceController::class, 'attendance'])->name('date.show');
 });

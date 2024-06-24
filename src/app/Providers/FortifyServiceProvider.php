@@ -8,6 +8,8 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\RateLimiter;
 use Illuminate\Support\ServiceProvider;
 use Laravel\Fortify\Fortify;
+use Laravel\Fortify\Http\Requests\LoginRequest as FortifyLoginRequest;
+use App\Http\Requests\LoginRequest;
 
 class FortifyServiceProvider extends ServiceProvider
 {
