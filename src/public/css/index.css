@@ -34,6 +34,7 @@
 	font-weight: bold;
 }
 
-.stamp-form__btn--color {
-	color: rgb(175, 175, 175);
+.stamp-form__btn:disabled {
+    opacity: 0.5; /* ボタンを薄く表示する */
+    pointer-events: none;
 }

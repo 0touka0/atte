@@ -4,7 +4,6 @@ namespace App\Http\Controllers;
 
 use App\Models\Work;
 use Carbon\Carbon;
-use Illuminate\Pagination\Paginator;
 
 class AttendanceController extends Controller
 {

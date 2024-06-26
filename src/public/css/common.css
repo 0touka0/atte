@@ -57,6 +57,7 @@ body {
   font-weight: bold;
 }
 
+/* ボタン */
 .btn {
   width: 35%;
   padding: 12px;
@@ -66,4 +67,57 @@ body {
   color: #fff;
   font-size: 1rem;
   cursor: pointer;
+}
+
+/* メッセージ */
+.error-message {
+  color: red;
+}
+
+/* ページネーション */
+.pagination {
+    display: flex;
+    list-style: none;
+    margin-top: 30px;
+}
+
+.pagination li a, .pagination li span {
+    display: inline-block;
+    padding: 8px 16px;
+    font-size: 16px;
+    color: #007bff;
+    text-decoration: none;
+    background-color: #ffffff;
+    border: 1px solid #dee2e6;
+    transition: background-color 0.3s;
+}
+
+.pagination li a:hover, .pagination li a:focus {
+    background-color: #e9ecef;
+    border-color: #dee2e6;
+    outline: none;
+}
+
+.pagination li.active span {
+    color: #ffffff;
+    background-color: #007bff;
+    border-color: #007bff;
+    cursor: default;
+}
+
+.pagination li.disabled span {
+    color: #6c757d;
+    pointer-events: none;
+    background-color: #ffffff;
+    border-color: #dee2e6;
+}
+
+.pagination-arrow-left {
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+}
+
+.pagination-arrow-right {
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
 }

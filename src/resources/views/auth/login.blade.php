@@ -12,7 +12,7 @@
 			@csrf
 			<div class="login-form__group">
 				<input type="email" class="login-form__input" name="email" placeholder="メールアドレス">
-				<p class="login-form__error-message">
+				<p class="error-message">
 					@error('email')
 							{{ $message }}
 					@enderror
@@ -20,7 +20,7 @@
 			</div>
 			<div class="login-form__group">
 				<input type="password" class="login-form__input" name="password" placeholder="パスワード">
-				<p class="login-form__error-message">
+				<p class="error-message">
 					@error('password')
 							{{ $message }}
 					@enderror

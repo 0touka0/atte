@@ -12,7 +12,7 @@
 			@csrf
 			<div class="register-form__group">
 				<input type="text" class="register-form__input" name="name" placeholder="名前">
-				<p class="register-form__error-message">
+				<p class="error-message">
 					@error('name')
 						{{ $message }}
 					@enderror
@@ -20,7 +20,7 @@
 			</div>
 			<div class="register-form__group">
 				<input type="email" class="register-form__input" name="email" placeholder="メールアドレス">
-				<p class="register-form__error-message">
+				<p class="error-message">
 					@error('email')
 						{{ $message }}
 					@enderror
@@ -28,7 +28,7 @@
 			</div>
 			<div class="register-form__group">
 				<input type="password" class="register-form__input" name="password" placeholder="パスワード">
-				<p class="register-form__error-message">
+				<p class="error-message">
 					@error('password')
 						{{ $message }}
 					@enderror

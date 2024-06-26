@@ -24,29 +24,24 @@
 @endsection
 
 @section('content')
-@if(session('message'))
-    <div class="alert alert-success">
-        {{ session('message') }}
-    </div>
-@endif
 <div class="stamp-form">
 	<h2 class="stamp-form__heading">{{ $user->name }}さんお疲れ様です！</h2>
 	<div class="stamp-form__inner">
 		<form class="stamp-form__form" action="{{ route('work.start') }}" method="POST">
 			@csrf
-			<button type="submit" class="stamp-form__btn stamp-form__btn--color">勤務開始</button>
+			<button type="submit" class="stamp-form__btn" {{ $isWorking ? 'disabled' : '' }}>勤務開始</button>
 		</form>
 		<form class="stamp-form__form" action="{{ route('work.end') }}" method="POST">
 			@csrf
-			<button type="submit" class="stamp-form__btn">勤務終了</button>
+			<button type="submit" class="stamp-form__btn" {{ !$isWorking || $isOnBreak ? 'disabled' : '' }}>勤務終了</button>
     </form>
     <form class="stamp-form__form" action="{{ route('break.start') }}" method="POST">
 			@csrf
-			<button type="submit" class="stamp-form__btn">休憩開始</button>
+			<button type="submit" class="stamp-form__btn" {{ $isOnBreak || !$isWorking ? 'disabled' : '' }}>休憩開始</button>
     </form>
     <form class="stamp-form__form" action="{{ route('break.end') }}" method="POST">
 			@csrf
-			<button type="submit" class="stamp-form__btn stamp-form__btn--color">休憩終了</button>
+			<button type="submit" class="stamp-form__btn" {{ !$isOnBreak ? 'disabled' : '' }}>休憩終了</button>
     </form>
 	</div>
 </div>

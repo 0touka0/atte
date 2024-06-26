@@ -14,7 +14,16 @@ class WorkController extends Controller
     {
         $id = Auth::id(); // 現在ログインしているユーザのIDを取得
         $user = User::where('id', $id)->first();
-        return view('index', compact('user'));
+
+        // 勤務中か否か
+        $isWorking = Work::where('user_id', $id)->whereNull('end')->exists();
+
+        // 休憩中か否か
+        $isOnBreak = BreakTime::whereHas('work', function ($query) use ($id) {
+            $query->where('user_id', $id)->whereNull('end');
+        })->whereNull('end')->exists();
+
+        return view('index', compact('user','isWorking', 'isOnBreak'));
     }
 
     //勤務時間
