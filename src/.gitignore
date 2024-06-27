@@ -14,3 +14,7 @@ yarn-error.log
 /.idea
 /.vscode
 docker/mysql/data/
+*.pem
+*.cnf
+*.log
+

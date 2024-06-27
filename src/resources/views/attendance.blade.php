@@ -31,7 +31,7 @@
 </div>
 <table class="work-time__table">
 	<tr class="work-time__row">
-		<th class="work-time__header">名前</th>
+		<th class="work-time__header wide">名前</th>
 		<th class="work-time__header">勤務開始</th>
 		<th class="work-time__header">勤務終了</th>
 		<th class="work-time__header">休憩時間</th>
