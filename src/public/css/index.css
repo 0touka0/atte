@@ -1,0 +1,40 @@
+.stamp-form {
+	width: 100%;
+}
+
+.stamp-form__heading {
+	text-align: center;
+	margin-bottom: 30px;
+}
+
+.stamp-form__inner {
+	display: grid;
+	grid-template-rows: 250px 250px;
+	grid-template-columns: 1fr 1fr;
+	margin: 0 auto;
+	align-items: center;
+	width: 65%;
+}
+
+.stamp-form__form {
+	background: #fff;
+	height: 80%;
+	width: 90%;
+	margin: 0 auto;
+	border-radius: 5px;
+	position: relative;
+}
+
+.stamp-form__btn {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	font-size: 25px;
+	font-weight: bold;
+}
+
+.stamp-form__btn:disabled {
+    opacity: 0.5; /* ボタンを薄く表示する */
+    pointer-events: none;
+}

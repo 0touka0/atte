@@ -1,0 +1,52 @@
+.daily {
+	margin-bottom: 30px;
+}
+
+.daily span {
+	font-weight: bold;
+}
+
+.daily__icon {
+	width: 30px;
+	display: inline-block;
+	text-align: center;
+	text-decoration: none;
+	border: solid 1px blue;
+	color: blue;
+	background: white;
+	font-weight: bold;
+}
+
+.daily__icon--left {
+	margin-right: 20px;
+}
+
+.daily__icon--right {
+	margin-left: 20px;
+}
+
+.work-time__table {
+	width: 70%;
+	border-collapse: collapse;
+	margin: 0 auto;
+}
+
+.work-time__row {
+	line-height: 5rem;
+}
+
+.work-time__header, .work-time__data {
+	border-top: solid 1px #000; /* 追加：headerとdataセルにボーダーを適用 */
+	text-align: left;
+	padding-left: 50px;
+	font-size: 18px;
+}
+
+.work-time__header {
+	font-weight: bold;
+	width: 20%;
+}
+
+.wide {
+	width: 23%;
+}
