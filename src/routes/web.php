@@ -3,6 +3,7 @@
 use App\Http\Controllers\AttendanceController;
 use App\Http\Controllers\WorkController;
 use Illuminate\Support\Facades\Route;
+use Laravel\Fortify\Fortify;
 
 /*
 |--------------------------------------------------------------------------
@@ -15,7 +16,11 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::middleware('auth')->group(function () {
+Fortify::verifyEmailView(function () {
+	return view('auth.verify');
+});
+
+Route::middleware('auth', 'verified')->group(function () {
 	Route::get('/', [WorkController::class, 'index']);
 	Route::post('/work/start', [WorkController::class, 'startWork'])->name('work.start');
 	Route::post('/work/end', [WorkController::class, 'endWork'])->name('work.end');
