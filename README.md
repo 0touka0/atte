@@ -1,5 +1,4 @@
-# アプリケーション名
-atte
+# atte
 ある企業の勤怠管理システム
 ![atte_Home](https://github.com/0touka0/atte/assets/163740181/7562f463-5f40-4fad-a757-d604835161df)
 
