@@ -26,7 +26,7 @@ Laravel環境構築
 - MailHog
 
 ## ER図
-
+![atte_ER](https://github.com/0touka0/atte/assets/163740181/0f3959d8-2f01-44f2-90b0-c369417a6920)
 
 
 
