@@ -46,23 +46,23 @@
 # 環境構築
 Dockerビルド
 
- 1.`git clone git@github.com:0touka0/atte.git`<br>
- 2.docker-compose up -d --build
+1. `git clone git@github.com:0touka0/atte.git`<br>
+2. `docker-compose up -d --build`
 
-＊MySQLは、OSによって起動しない場合があるのでそれぞれのPCに合わせて、docker-compose.ymlファイルを編集してください。
+※MySQLは、OSによって起動しない場合があるのでそれぞれのPCに合わせて、docker-compose.ymlファイルを編集してください。
 
 Laravel環境構築
 
-1. docker-compose exec php bash
-2. composer install
-3. .env.exampleファイルから.envを作成し、環境変数を変更
-4. php artisan key:generate
-5. php artisan migrate
-6. php artisan db:seed
+1. `docker-compose exec php bash`
+2. `composer install`
+3. `.env.example`ファイルから`.env`を作成し、環境変数を変更
+4. `php artisan key:generate`
+5. `php artisan migrate`
+6. `php artisan db:seed`
 
 ## 機能確認用ユーザー
 - ユーザー名：テスト
 - メールアドレス：test@example.com
 - パスワード：testexample
-- メール認証はmailhogから認証可能<br>(mailhogを使用する場合.envのMAIL_FROM_ADDRESSに送信側のメールアドレスを記述する必要があります。)
+- メール認証はmailhogから認証可能
 - 認証メールが届かなかった場合、再度送信してください
