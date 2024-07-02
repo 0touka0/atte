@@ -1,0 +1,31 @@
+.user-table__header {
+	display: flex;
+	justify-content: space-between;
+	line-height: 3rem;
+	width: 90%;
+}
+
+.return-btn__link {
+	padding: 5px 15px 5px 10px;
+	text-decoration: none;
+	border: solid 2px #000;
+	color: #000;
+}
+
+.user-list__table {
+	width: 80%;
+	margin: 0 auto 80px;
+	border-collapse: collapse;
+}
+
+.user-list__header, .user-list__data {
+	padding: 40px 10px 0;
+}
+
+.user-list__header {
+	width: 20%;
+	text-align: left;
+	font-size: 18px;
+	font-weight: bold;
+	border-bottom: solid 2px #000;
+}

@@ -11,7 +11,10 @@
 			<a href="/" class="header__link">ホーム</a>
 		</li>
 		<li class="nav__list">
-			<a href="/attendance" class="header__link">日付一覧</a>
+			<a href="{{ route('user.list') }}" class="header__link">ユーザー一覧</a>
+		</li>
+		<li class="nav__list">
+			<a href="{{ route('date.show') }}" class="header__link">日付一覧</a>
 		</li>
 		<li class="nav__list">
 			<form action="/logout" method="post">

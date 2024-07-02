@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\AttendanceController;
+use App\Http\Controllers\UserListController;
 use App\Http\Controllers\WorkController;
 use Illuminate\Support\Facades\Route;
 use Laravel\Fortify\Fortify;
@@ -27,4 +28,6 @@ Route::middleware('auth', 'verified')->group(function () {
 	Route::post('/break/start', [WorkController::class, 'startBreak'])->name('break.start');
 	Route::post('/break/end', [WorkController::class, 'endBreak'])->name('break.end');
 	Route::get('/attendance/{date?}', [AttendanceController::class, 'attendance'])->name('date.show');
+	Route::get('/userlist', [UserListController::class, 'userlist'])->name('user.list');
+	Route::get('/userdata',	[UserListController::class, 'userdata'])->name('user.data');
 });

@@ -1,9 +1,5 @@
 @extends('layouts.app')
 
-@section('css')
-<link rel="stylesheet" href="{{ asset('css/auth/register.css') }}">
-@endsection
-
 @section('content')
 <h1>メールアドレスの確認が必要です</h1>
 <p>ご登録ありがとうございます！登録を完了するために、メールに記載されているリンクをクリックしてください。</p>

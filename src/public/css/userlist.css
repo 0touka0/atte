@@ -1,0 +1,30 @@
+.user-list__table {
+	width: 80%;
+	margin: 0 auto 80px;
+	border-collapse: collapse;
+}
+
+.user-list__header, .user-list__data {
+	padding: 40px 0 0;
+}
+
+.user-list__header {
+	width: 20%;
+	text-align: left;
+	font-size: 18px;
+	font-weight: bold;
+	border-top: solid 3px #000;
+	border-bottom: solid 2px #000;
+}
+
+.user-list__data--id {
+	padding-left: 80px;
+}
+
+.user-btn {
+	width: 100%;
+	line-height: 2rem;
+	text-align: left;
+	padding-left: 10px;
+	border: solid 2px #000;
+}

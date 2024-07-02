@@ -17,12 +17,12 @@ class Work extends Model
     // アクセサを定義する
     public function getStartAttribute($value)
     {
-        return Carbon::parse($value)->format('H:i:s');
+        return Carbon::parse($value)->format('Y-m-d H:i:s');
     }
 
     public function getEndAttribute($value)
     {
-        return Carbon::parse($value)->format('H:i:s');
+        return Carbon::parse($value)->format('Y-m-d H:i:s');
     }
 
     public function user()

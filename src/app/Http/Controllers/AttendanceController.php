@@ -22,8 +22,7 @@ class AttendanceController extends Controller
         $works = Work::whereDate('start', $today)->with(['breakTimes', 'user'])->paginate(5);
 
         // 勤務時間と休憩時間の合計を計算
-        $totalWorkTime = 0;
-        $works->each(function ($work) use (&$totalWorkTime) {
+        $works->each(function ($work) {
             // 勤務時間の計算
             $workStartTime = Carbon::parse($work->start);
             $workEndTime = Carbon::parse($work->end);
@@ -36,16 +35,14 @@ class AttendanceController extends Controller
 
             // 実勤務時間の計算（勤務時間 - 休憩時間）
             $actualWorkTime = $workDuration - $totalBreakTime;
+
+            // 表示時間のフォーマット
+            $work->startFormatted = $workStartTime->format('H:i:s');
+            $work->endFormatted = $workEndTime->format('H:i:s');
             $work->totalBreakTimeFormatted = gmdate('H:i:s', $totalBreakTime);
             $work->actualWorkTimeFormatted = gmdate('H:i:s', $actualWorkTime);
-
-            // 全体の勤務時間の合計に加算
-            $totalWorkTime += $actualWorkTime;
         });
 
-        // 勤務時間をフォーマット
-        $totalWorkTimeFormatted = gmdate('H:i:s', $totalWorkTime);
-
-        return view('attendance', compact('works', 'today', 'previousDate', 'nextDate', 'totalWorkTimeFormatted'));
+        return view('attendance', compact('works', 'today', 'previousDate', 'nextDate'));
     }
 }

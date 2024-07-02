@@ -25,6 +25,12 @@
 	margin-left: 20px;
 }
 
+.daily__icon--right-disabled {
+	margin-left: 20px;
+	color: #6c757d;
+  pointer-events: none;
+}
+
 .work-time__table {
 	width: 70%;
 	border-collapse: collapse;
