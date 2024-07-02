@@ -64,9 +64,5 @@ Laravel環境構築
 - ユーザー名：テスト
 - メールアドレス：test@example.com
 - パスワード：testexample
-- メール認証はmailhogから認証可能
+- メール認証はmailhogから認証可能<br>(mailhogを使用する場合.envのMAIL_FROM_ADDRESSに送信側のメールアドレスを記述する必要があります。)
 - 認証メールが届かなかった場合、再度送信してください
-
-
-
-
