@@ -1,6 +1,49 @@
-# atte
+# アプリケーション名
+atte
+ある企業の勤怠管理システム
+![atte_Home](https://github.com/0touka0/atte/assets/163740181/7562f463-5f40-4fad-a757-d604835161df)
 
-## 環境構築
+## 作成した目的
+人事評価のため
+
+
+## アプリケーションURL
+- http://localhost/
+- http://localhost/register
+- http://localhost/login
+- http://localhost/attendance
+- http://localhost/userlist
+- http://localhost/userdata
+
+## 他のリポジトリ
+無し
+
+## 機能一覧
+- 会員登録
+- ログイン
+- メール認証
+- 勤務開始
+- 勤務終了
+- 休憩開始
+- 休憩終了
+- 日付別勤怠情報取得
+- ユーザー情報取得
+- ユーザー毎勤怠情報取得
+- ページネーション
+
+## 使用技術(実行環境)
+- PHP 7.4.9
+- Laravel 8
+- MySQL 8.0.26
+- nginx 1.21.1
+
+## テーブル設計
+![atte_table](https://github.com/0touka0/atte/assets/163740181/d96af0dd-6e2a-41dc-a4bd-e62e90d2c076)
+
+## ER図
+![atte_ER](https://github.com/0touka0/atte/assets/163740181/0f3959d8-2f01-44f2-90b0-c369417a6920)
+
+# 環境構築
 Dockerビルド
 
  1.`git clone git@github.com:0touka0/atte.git`<br>
@@ -17,25 +60,9 @@ Laravel環境構築
 5. php artisan migrate
 6. php artisan db:seed
 
-## 使用技術(実行環境)
-- PHP 7.4.9
-- Laravel 8
-- MySQL 8.0.26
-- nginx 1.21.1
-- phpMyAdmin
-- MailHog
-
-## ER図
-![atte_ER](https://github.com/0touka0/atte/assets/163740181/0f3959d8-2f01-44f2-90b0-c369417a6920)
 
 
 
-## URL
-- 開発環境：http://localhost/
-- 開発環境：http://localhost/register
-- 開発環境：http://localhost/login
-- 開発環境：http://localhost/attendance
-- 開発環境：http://localhost/userlist
-- 開発環境：http://localhost/userdata
-- phpMyAdmin : http://localhost:8080/
-- MailHog : http://localhost:8025/
+
+
+
