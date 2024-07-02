@@ -14,6 +14,6 @@ class BreakTimeSeeder extends Seeder
      */
     public function run()
     {
-        BreakTime::factory()->count(20)->create();
+        BreakTime::factory()->count(50)->create();
     }
 }

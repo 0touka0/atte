@@ -12,6 +12,7 @@
 - http://localhost/attendance
 - http://localhost/userlist
 - http://localhost/userdata
+- http://localhost:8025
 
 ## 他のリポジトリ
 無し
@@ -34,6 +35,7 @@
 - Laravel 8
 - MySQL 8.0.26
 - nginx 1.21.1
+- mailHog
 
 ## テーブル設計
 ![atte_table](https://github.com/0touka0/atte/assets/163740181/d96af0dd-6e2a-41dc-a4bd-e62e90d2c076)
@@ -58,8 +60,12 @@ Laravel環境構築
 5. php artisan migrate
 6. php artisan db:seed
 
-
-
+## 機能確認用ユーザー
+- ユーザー名：テスト
+- メールアドレス：test@example.com
+- パスワード：testexample
+- メール認証はmailhogから認証可能
+- メール認証がうまくいかなかった場合、再度送信してください
 
 
 
